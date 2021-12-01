@@ -64,23 +64,11 @@ p {
 
 .section {
   padding-bottom: 94px;
-}
-
-/* ??? ГДЕ НА ПЕРВОЙ СТРАНИЦЕ ПЕРВЫЙ ЭЛЕМЕНТ (на второй все ок)?  */
-.section:first-child {
   padding-top: 94px;
-  background-color: tomato; /*ВРЕМЕННО*/
-  /* outline: 1px solid tomato; */
 }
 
-/* .section:last-child {
-    background-color: var(--second-block-color);
-} */
-
-/* ??? ПОЧЕМУ ПРИ ТРЕХ ЭЛЕМЕНТАХ С КЛАССОМ .section, ЧТОБЫ ИЗМЕНИТЬ ФОН ТРЕТЬЕГО
-    НЕОБХОДИМО УКАЗЫВАТЬ ЧЕТВЕРТЫЙ ЭЛЕМЕНТ? ЧТО ЭТО ЗА ПЕРВЫЙ "ВИРТУАЛЬНЫЙ" .section? */
-.section:nth-child(4) {
-  background-color: aqua; /*ВРЕМЕННО*/
+.section:last-child {
+  background-color: var(--second-block-color);
 }
 
 .container > h2 {
@@ -104,6 +92,8 @@ p {
 
 .logo-link {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -172,6 +162,16 @@ p {
   padding-bottom: 200px;
   text-align: center;
 }
+
+.hero-section > h1 {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .hero-section {
+    
+} */
 
 .hero-title {
   font-weight: 700;
@@ -246,6 +246,10 @@ p {
 
 /* -------------------WORKS------------------- */
 
+.section:nth-child(3) {
+  padding-top: 0;
+}
+
 .works-title {
   font-weight: 700;
   font-size: 36px;
@@ -264,13 +268,22 @@ p {
 .works-item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: ((100% - 3 * 30px) / 3);
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.works-img {
+  display: block;
+  min-width: 100%;
+  height: auto;
 }
 
 /* -------------------TEAM------------------- */
 
 .team-item {
   background-color: var(--third-block-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-title {
@@ -304,6 +317,7 @@ p {
 }
 
 .team-person-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -376,7 +390,7 @@ p {
 .projects-filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .projects-filter-item:not(:last-child) {
@@ -414,8 +428,7 @@ p {
 .projects-item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: ((100% - 3 * 30px)/3);
-  /* width: 370px; */
+  flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
 .project-image {
