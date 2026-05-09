@@ -1,0 +1,15 @@
+.site-nav-link {
+  font-weight: 500;
+  color: #2e2f42;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus,
+.address-item-link:hover,
+.address-item-link:focus {
+  color: #404bbf;
+}
+
+.address-list {
+  font-style: normal;
+}
